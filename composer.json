@@ -1,0 +1,21 @@
+{
+  "name": "rktype/ps-module-enhancer",
+  "license": "",
+  "minimum-stability": "dev",
+  "authors": [
+    {
+      "name": "Mirko Renzetti",
+      "email": "info@mirkorenzetti.it"
+    }
+  ],
+  "require": {
+    "illuminate/database": "5.2.*",
+    "illuminate/http": "5.2.*",
+    "nesbot/carbon": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "RkType\\PSModuleEnhancer\\": "src"
+    }
+  }
+}
