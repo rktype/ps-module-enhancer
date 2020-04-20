@@ -64,9 +64,25 @@ class ModuleEnhancerService
         return $this->config_service->getValue('PS_LANG_DEFAULT');
     }
 
+    /**
+     * @return false|string
+     */
     public function urlToken()
     {
         return substr(_COOKIE_KEY_, 34, 8);
+    }
+
+    /**
+     * @param string|null $path
+     * @return string
+     */
+    public function getModulePath($path = null)
+    {
+        return implode('/', array_filter([
+            rtrim(_PS_MODULE_DIR_, '/'),
+            trim($this->module->name, '/'),
+            trim($path, '/')
+        ]));
     }
 
 
