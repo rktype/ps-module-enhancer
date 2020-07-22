@@ -13,6 +13,7 @@ use RkType\PSModuleEnhancer\Services\Reserved\ModuleEnhancerConfigurationService
 use RkType\PSModuleEnhancer\Services\Reserved\ModuleEnhancerDBService;
 use RkType\PSModuleEnhancer\Services\Reserved\ModuleEnhancerHooksService;
 use RkType\PSModuleEnhancer\Services\Reserved\ModuleEnhancerMailservice;
+use RkType\PSModuleEnhancer\Services\Reserved\ModuleEnhancerRequestService;
 use RkType\PSModuleEnhancer\Services\Reserved\ModuleEnhancerValidationService;
 
 class ModuleEnhancerService
@@ -273,11 +274,11 @@ class ModuleEnhancerService
      */
 
     /**
-     * @return Request
+     * @return ModuleEnhancerRequestService
      */
     public function request()
     {
-        return Request::capture();
+        return new ModuleEnhancerRequestService;
     }
 
     /**
